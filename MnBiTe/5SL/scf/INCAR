@@ -1,0 +1,75 @@
+ALGO = Fast     # minimization algorithm
+#ISTART = 1     # read wavefunction (default)
+#ICHARG = 1     # read/calculate charge density (default), ICHARG=11 for nscf
+PREC = Accurate     # Precision of FFT grids and other stuff
+NCORE = 4  # how many cores work on an individual orbital
+NBANDS = 500
+
+ENCUT = 600.0 # energy cut of in eV
+EDIFF = 1E-7 # self constintency condition
+NELM = 100000 # number of max iterations
+ISMEAR = 0 # type of smearing (0 -> gaussian)
+SIGMA = 0.02 # value of smearing in eV
+
+# IBRION = 1 # structural optimization
+# ISIF = 2 # Move atoms only, keep cell dimensions
+# POTIM = 0.8 # gradient descent parameter
+# NSW = 10000 # number of iterations for structural optimzation
+# EDIFFG = -1E-3 # stop condition: positive=energy difference, negative=forces bellow threshold
+
+LORBIT = 11 # write orbital projected stuff for ploting
+LREAL = Auto # work in real/k space
+LASPH = True # something related to PAW
+LMAXMIX = 4 # related to PAW
+ADDGRID = .TRUE. # only for well converged
+
+LNONCOLLINEAR = .TRUE.
+LSORBIT = .TRUE.
+MAGMOM = 0 0 4 \
+         0 0 -4 \
+         0 0 4 \   
+         0 0 -4 \
+         0 0 4 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \    
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 \
+         0 0 0 
+
+LDAU = .TRUE. # DFT + U
+LDAUTYPE = 2 # type of dft+u
+LDAUL = 2 -1 -1 # to which orbital of which atom we apply. In this case d(l=2) orbitals of Mn and none of the rest
+LDAUU = 5.34 0.0 0.0 # value of U (in this case U-J) 
+LDAUPRINT = 0 #verbosity of dft+u
+
+NEDOS = 1001
